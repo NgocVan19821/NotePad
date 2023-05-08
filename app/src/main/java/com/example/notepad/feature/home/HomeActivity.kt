@@ -11,6 +11,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+    }
+    private fun evenListener(){
+
+
+
+
+
 
     }
 }
