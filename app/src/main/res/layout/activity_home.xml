@@ -11,7 +11,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
+        android:layout_height="@dimen/_45sdp"
         android:background="@color/grey">
 
         <ImageView
@@ -35,7 +35,7 @@
 
         <ImageButton
             android:id="@+id/btn_search"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_50sdp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginHorizontal="@dimen/_30sdp"
@@ -67,29 +67,41 @@
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/main"
         app:layout_constraintTop_toBottomOf="@+id/main"
         tools:listitem="@layout/item_list">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvNotes"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/item_list"
             android:layout_below="@+id/main" />
 
-        <ImageView
+<!--        <ImageView-->
 
-            android:id="@+id/btn_add"
-            android:layout_width="wrap_content"
-            android:padding="@dimen/_10sdp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/grey"
-            android:background="@drawable/bg_add"
-            android:layout_margin="@dimen/_15sdp"
-            android:layout_gravity="bottom|end"
-            android:src="@drawable/ic_add" />
+<!--            android:id="@+id/btn_add"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:padding="@dimen/_10sdp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/grey"-->
+<!--            android:background="@drawable/bg_add"-->
+<!--            android:layout_margin="@dimen/_15sdp"-->
+<!--            android:layout_gravity="bottom|end"-->
+<!--            android:src="@drawable/ic_add" />-->
     </FrameLayout>
+    <ImageView
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey"
+        android:background="@drawable/bg_add"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_add" />
 </androidx.constraintlayout.widget.ConstraintLayout>
